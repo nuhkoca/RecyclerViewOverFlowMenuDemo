@@ -32,6 +32,7 @@ public class SimpleDataAdapter extends RecyclerView.Adapter<SimpleDataAdapter.Vi
 
     private List<SimpleDataModel> mSimpleDataModel;
     private final Context mContext;
+    private Toast mToast;
 
     public SimpleDataAdapter(List<SimpleDataModel> mSimpleDataModel, Context mContext) {
         this.mSimpleDataModel = mSimpleDataModel;
@@ -131,13 +132,17 @@ public class SimpleDataAdapter extends RecyclerView.Adapter<SimpleDataAdapter.Vi
             switch (menuItem.getItemId()) {
                 case R.id.share_quickly:
 
-                    Toast infoToast = Toast.makeText(mContext, "Clicked Instant Share", Toast.LENGTH_LONG);
-                    infoToast.show();
+                    if (mToast != null)
+                        mToast.cancel();
+                    mToast = Toast.makeText(mContext, "Clicked " + R.id.share_quickly, Toast.LENGTH_LONG);
+                    mToast.show();
 
                     return true;
                 case R.id.open_in_browser_quickly:
-                    infoToast = Toast.makeText(mContext, "Clicked Open in Browser", Toast.LENGTH_LONG);
-                    infoToast.show();
+                    if (mToast != null)
+                        mToast.cancel();
+                    mToast = Toast.makeText(mContext, "Clicked " + R.id.open_in_browser_quickly, Toast.LENGTH_LONG);
+                    mToast.show();
 
                     return true;
                 default:
