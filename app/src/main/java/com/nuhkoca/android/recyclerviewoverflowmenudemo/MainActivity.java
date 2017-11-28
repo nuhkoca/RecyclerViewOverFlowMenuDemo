@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private static final int AUTHOR = R.string.author_text;
     private static final int DATE = R.string.date_text;
 
+    private static final int MAX_ROWS = 10;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     private void addItemsToList() {
         mSimpleDataModel = new ArrayList<>();
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < MAX_ROWS; i++) {
             SimpleDataModel simpleDataModel = new SimpleDataModel(IMAGE, TITLE, DESCRIPTION, AUTHOR, DATE);
 
             mSimpleDataModel.add(simpleDataModel);
