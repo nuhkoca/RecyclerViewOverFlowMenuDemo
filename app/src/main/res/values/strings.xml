@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">OverFlowMenuDemo</string>
+    <string name="title_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</string>
+    <string name="description_text">Mauris consequat vel metus ut aliquam. Vestibulum in magna viverra sapien sollicitudin ultrices molestie eget ipsum. Sed sed tortor tristique, varius tellus vitae, luctus felis</string>
+    <string name="date_text">21/12/2017</string>
+    <string name="author_text">Joe Doe</string>
+    <string name="quick_share">Instant Share</string>
+    <string name="quick_browser">Open in Browser</string>
+</resources>
