@@ -129,19 +129,22 @@ public class SimpleDataAdapter extends RecyclerView.Adapter<SimpleDataAdapter.Vi
 
         @Override
         public boolean onMenuItemClick(MenuItem menuItem) {
-            switch (menuItem.getItemId()) {
+            int IdThatWasClicked = menuItem.getItemId();
+
+            switch (IdThatWasClicked) {
                 case R.id.share_quickly:
 
                     if (mToast != null)
                         mToast.cancel();
-                    mToast = Toast.makeText(mContext, "Clicked " + R.id.share_quickly, Toast.LENGTH_LONG);
+                    mToast = Toast.makeText(mContext, "Clicked " + mContext.getString(R.string.quick_share), Toast.LENGTH_LONG);
                     mToast.show();
 
                     return true;
                 case R.id.open_in_browser_quickly:
+
                     if (mToast != null)
                         mToast.cancel();
-                    mToast = Toast.makeText(mContext, "Clicked " + R.id.open_in_browser_quickly, Toast.LENGTH_LONG);
+                    mToast = Toast.makeText(mContext, "Clicked " + mContext.getString(R.string.quick_browser), Toast.LENGTH_LONG);
                     mToast.show();
 
                     return true;
